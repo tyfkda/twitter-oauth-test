@@ -14,6 +14,7 @@ before do
 end
 
 get '/' do
+  @session = session
   erb :index
 end
 
@@ -43,6 +44,7 @@ get '/access_token' do
   session[:access_token_secret] = @access_token.secret
   session[:user_id] = @twitter.info['user_id']
   session[:screen_name] = @twitter.info['screen_name']
+  session[:profile_image] = @twitter.info['profile_image_url_https']
 
   erb :authorize_success
 end

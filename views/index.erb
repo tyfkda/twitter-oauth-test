@@ -1,6 +1,13 @@
 <!DOCTYPE html>
 <html>
   <body>
+    <% if @session.has_key?(:screen_name) %>
+      <p>
+        Hello, <img src="<%= @session[:profile_image] %>">
+        <b><%= @session[:screen_name] %></b>
+      </p>
+    <% end %>
+
     <a href="/request_token">Twitter Login</a>
   </body>
 </html>
