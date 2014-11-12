@@ -46,5 +46,5 @@ get '/access_token' do
   session[:screen_name] = @twitter.info['screen_name']
   session[:profile_image] = @twitter.info['profile_image_url_https']
 
-  erb :authorize_success
+  redirect '/'
 end
