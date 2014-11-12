@@ -177,6 +177,35 @@ Herokuコマンドでアプリの登録などを行う
 * `heroku create`
 * `git push master heroku`
 
+### キーやシークレットを環境変数から取得し、ソースに含めないようにする
+
+Twitterのアプリのコンシューマキーやシークレットをソースに書いていたけどそれはあまりよくないし、
+githubなどにアップロードしてしまうのは問題がある。
+そこでソースコードからは外して環境変数に入れて使えるようにする。
+
+環境変数に入れるにはシェルで設定する
+
+```bash
+$ export CONSUMER_KEY="..."
+$ export CONSUMER_SECRET="..."
+```
+
+Sinatraアプリから参照するには `ENV` を通して
+
+```rb
+  key = ENV['CONSUMER_KEY']
+  secret = ENV['CONSUMER_SECRET']
+```
+
+とできる。
+
+Herokuで使えるようにするには `heroku config:add` で設定する：
+
+```bash
+$ heroku config:add CONSUMER_KEY="..."
+$ heroku config:add CONSUMER_SECRET="..."
+```
+
 
 ### 他
 
