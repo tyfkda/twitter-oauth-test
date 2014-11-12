@@ -6,8 +6,10 @@
         Hello, <img src="<%= @session[:profile_image] %>">
         <b><%= @session[:screen_name] %></b>
       </p>
-    <% end %>
 
-    <a href="/request_token">Twitter Login</a>
+      <p><a href="/logout">Logout</a></p>
+    <% else %>
+      <p><a href="/request_token">Twitter Login</a></p>
+    <% end %>
   </body>
 </html>
