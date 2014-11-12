@@ -1,3 +1,15 @@
+# -*- coding: utf-8 -*-
+
+# 起動：
+#   $ bundle exec ruby app.rb
+# コマンドラインで環境変数にTwitterアプリのキーとシークレットを設定しておく
+#   $ export CONSUMER_KEY='...'
+#   $ export CONSUMER_SECRET='...'
+# Herokuで動かすにはHerokuの環境変数に設定しておく
+#   $ heroku config:add CONSUMER_KEY="..."
+#   $ heroku config:add CONSUMER_SECRET="..."
+#
+
 require 'sinatra'
 require 'twitter_oauth'
 
