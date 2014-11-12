@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html>
   <body>
+    <h1>Twitter login test</h1>
+
     <% if @session.has_key?(:screen_name) %>
       <p>
         Hello, <img src="<%= @session[:profile_image] %>">
@@ -9,7 +11,7 @@
 
       <p><a href="/logout">Logout</a></p>
     <% else %>
-      <p><a href="/request_token">Twitter Login</a></p>
+      <p><a href="/request_token"><img src="sign-in-with-twitter-gray.png"></a></p>
     <% end %>
   </body>
 </html>
