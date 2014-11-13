@@ -1,0 +1,6 @@
+{
+  "name": "twitter-oauth-test",
+  "description": "Twitter OAuth test",
+  "repository": "https://github.com/tyfkda/twitter-oauth-test.git",
+  "keywords": ["twitter", "oauth", "ruby"]
+}
